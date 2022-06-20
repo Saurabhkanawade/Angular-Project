@@ -7,7 +7,9 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 })
 export class AddContactComponent implements OnInit, OnChanges, OnDestroy {
 
-  constructor() {}
+  constructor() {
+    console.log("hello");
+  }
 
   ngOnInit(): void {}
 

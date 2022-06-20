@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileComponent } from './profile.component';
+import { DownloadOexcelComponent } from './download-oexcel.component';
 
-describe('ProfileComponent', () => {
-  let component: ProfileComponent;
-  let fixture: ComponentFixture<ProfileComponent>;
+describe('DownloadOexcelComponent', () => {
+  let component: DownloadOexcelComponent;
+  let fixture: ComponentFixture<DownloadOexcelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileComponent ]
+      declarations: [ DownloadOexcelComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProfileComponent);
+    fixture = TestBed.createComponent(DownloadOexcelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
