@@ -10,6 +10,9 @@ import { ListProfileComponent } from './list-profile/list-profile.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ListProfileComponent
   ]
 })
 export class ProfileModule { }

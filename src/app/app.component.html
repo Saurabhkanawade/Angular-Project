@@ -1,3 +1,120 @@
 <h1 class="c1"> Hello World !</h1>
 
- <router-outlet></router-outlet>
+<!-- <div *ngIf="success_msg " class="bg-primary">
+User added successfully    
+</div> -->
+
+<!-- || -->
+
+<!-- <div *ngIf="success_msg || success_flag " class="bg-primary">
+    User added successfully    
+    </div> -->
+<!-- &&     -->
+
+<!-- <div *ngIf="success_msg && success_flag " class="bg-primary">
+        User added successfully    
+        </div>
+    -->
+<!-- not -->
+<!-- 
+<div *ngIf="! success_msg " class="bg-primary">
+    User added successfully    
+</div> -->
+<!-- 
+<div *ngIf=" success_msg ; else error_msg " class="bg-primary">
+    User added successfully    
+</div> -->
+<!-- 
+
+<div *ngIf=" success_msg ; then updated_msg ; else error_msg " class="bg-primary">
+    User added successfully    
+</div>
+
+<ng-template #updated_msg>
+   user is updated successfully
+</ng-template>
+
+<ng-template #error_msg style="background-color: red;">
+User is not added successfully
+</ng-template>
+          -->
+<!-- 
+<ul>
+    <li *ngFor="let contact of contacts ; index as i ; first as f ; last as l" class="bg-primary">
+    
+    <div *ngIf="f" style="background-color: red;">this is first record</div>
+    <div *ngIf="l" style="background-color: rgb(0, 255, 76);">this is last record</div>
+
+    <div>
+       {{ i }} {{contact.firstName}}  {{contact.lastName}}  {{contact.contactId}}
+    </div> 
+    </li>
+</ul> -->
+
+<!--
+<p>This is even or odd table</p>
+
+<ul>
+    <li *ngFor="let contact of contacts ;even as e ; odd as o" class="bg-primary">
+
+    <div *ngIf="f" style="background-color: red;">this is first record</div>
+    <div *ngIf="l" style="background-color: rgb(0, 255, 76);">this is last record</div> -->
+<!-- <div *ngIf="e" style="background-color: rgb(143, 132, 134);">
+    
+         {{contact.firstName}}  {{contact.lastName}}  {{contact.contactId}}
+    </div> 
+
+    <div *ngIf="e" style="background-color: rgb(187, 108, 227);">
+         {{contact.firstName}}  {{contact.lastName}}  {{contact.contactId}}
+     </div> 
+    </li>
+</ul>
+
+ -->
+
+
+
+<!-- ***********************ngSwitch****************-->
+<!-- 
+ <div [ngSwitch]="superPower" class="bg-primary">
+       <div *ngSwitchCase="'superhero'">this is superhero</div>
+       <div *ngSwitchCase="'spiderman'">this is spiderman </div>
+       <div *ngSwitchCase="'batman'">this is batman</div>
+       <div *ngSwitchCase="'hulkman'">this is hulkman</div>
+       <div *ngSwitchCase="'shaktiman'">this is shaktiman</div>
+       <div *ngSwitchDefault>this is default SuperPower</div>
+ </div>
+
+ 
+ <div [ngSwitch]="number" style="background-color: rgb(0, 204, 255);">
+    <div *ngSwitchCase="3523">this is women</div>
+    <div *ngSwitchCase="6523">this is man </div>
+    <div *ngSwitchCase="6352">this is batman</div>
+    <div *ngSwitchCase="7523">this is noob</div>
+    <div *ngSwitchCase="2523">this is saurabh</div>
+    <div *ngSwitchDefault>This is default number</div>
+</div> -->
+<!-- 
+<ul>
+    <li *ngFor="let Dream of Dreams ; first as f">
+        <div style="background-color: rgb(212, 190, 190);">
+            {{Dream.carName1}} {{Dream.carName2}} {{Dream.carName3}}
+            {{Dream.carName4}}
+        </div>
+
+        <div  *ngIf="f"  style="background-color: rgb(126, 112, 255);">this is first</div>
+        <div>
+            {{Dream.sportName1}} {{Dream.sportName2}} {{Dream.sportName3}}
+            {{Dream.sportName4}}
+        </div>
+        
+        <div style="background-color: rgb(206, 255, 100);">
+            {{Dream.bikeName1}} {{Dream.bikeName2}} {{Dream.bikeName3}}
+            {{Dream.bikeName4}}
+        </div>
+    </li>
+</ul>
+ -->
+
+<!-- <app-list-profile></app-list-profile> -->
+<router-outlet></router-outlet>
