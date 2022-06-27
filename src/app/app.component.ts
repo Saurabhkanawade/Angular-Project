@@ -8,56 +8,48 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'simpleProject';
 
-  // success_msg=false;
-  // success_msg=true;       
-  // success_flag=true;
+  styleproperty='c1';
 
-  // superPower= 'java';
-  // number= 2523;
+  head_demo='hello this is heading';
 
-  // contacts=[
-  //   {
-  //     'firstName':'Saurabh ',
-  //     'lastName':'Kanawade ',
-  //     'contactId':'153454  '
-  //   },
-  //   {
-  //     'firstName':'Shailesh ',
-  //     'lastName':'Karpe ',
-  //     'contactId':'2212112 ' 
-  //   },
-  //   {
-  //     'firstName':'Saurabh ',
-  //     'lastName':'Kandekar ',
-  //     'contactId':'3754454 '
-  //   },
-  // ]
+  isUserIsLoggedIn=true;
+
+  imgUrl='https://yt3.ggpht.com/ytc/AKedOLS4b38pOOO_p1CArN6Vntm7p69884nRkb6nG1VquB71CtSaXDuPcV-FqYPNcHet=s88-c-k-c0x00ffffff-no-rj-mo';
+  altText='img failed to load';
+
+  // object={
+  //   'name':'saurabh',
+  //   'dob':'30-sept-2000',
+  //   'address':'sangamener'
+  // }
 
 
-   Dreams=[
+  contacts=[
     {
-      'bikeName1':'splender pluse ,',
-      'bikeName2':'ktm Duke ,',
-      'bikeName3':'rx100 ,',
-      'bikeName4':'classic 350 '
-
+      'firstName':'Rushikesh',
+      'lastName':'Kandekar',
+      'dob':'22-nov-2000'
     },
     {
-      'carName1':'swift lxi , ',
-      'carName2':'mahindra thar, ',
-      'carName3':'mahindra commander,',
-      'carName4':'suzuki baleno'
-
+      'firstName':'Saurabh',
+      'lastName':'Kanawade',
+      'dob':'30-sept-2000'
     },
     {
-      'sportName1':'offroading, ',
-      'sportName2':'skating, ',
-      'sportName3':'cricket, ',
-      'sportName4':'table tanis'
-
+      'firstName':'Shankar',
+      'lastName':'Kandekar',
+      'dob':'06-june-2000'
     },
-
+    {
+      'firstName':'Shailesh',
+      'lastName':'karpe',
+      'dob':'14-oct-2000'
+    },
+    {
+      'firstName':'Sagar',
+      'lastName':'bhomale',
+      'dob':'10-june-1994'
+    }
   ]
-
   
 }
