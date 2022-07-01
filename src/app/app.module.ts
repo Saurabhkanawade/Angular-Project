@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileModule } from './profile/profile.module';
 import { FormsModule } from '@angular/forms';
+import { MypipePipe } from './mypipe.pipe';
+import { XpipePipe } from './xpipe.pipe';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    MypipePipe,
+    XpipePipe,
   ],
   imports: [
     BrowserModule,

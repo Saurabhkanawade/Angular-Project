@@ -1,5 +1,196 @@
-<h1> Hello World !</h1>
- 
+<div class="bg-warning">
+
+    <h1> Example on Directive </h1>
+
+
+    <h2>1 : Component Directive</h2>
+    <h3>--> AppComponent</h3>
+    <!--
+What is Component directive? 
+
+Component directive, is nothing but a simple class which is decorated with the @component decorator.
+In Angular 2 ,Normal typescript class will become a Component class once it has been decorated with @component decorator
+It is mainly used to specify the html templates.
+It is most commonly used directive in angular project
+If you need more info on angular component, then kindly refer here: need to add
+
+this is a use where component directive is used 
+
+  Here is the selector mapped
+
+  <my-app>Loading AppComponent content here ...</my-app>  
+  
+-->
+    <h2>2 : Structural Directive</h2>
+
+    <h3>--> *ngIf</h3>
+
+    <div *ngIf="newcontact> oldcontact">
+        This is newcontact right here !
+    </div>
+
+    <ng-template #updatecontact>
+        This is update contact right here !
+    </ng-template>
+
+    <ng-template #errorcontact>
+        This is error contact right here !
+    </ng-template>
+
+
+    <div class="bg-warning">
+        <h3>--> *ngFor</h3>
+
+        <table class="table table-bordered bg-danger text-white">
+            <tbody>
+                <tr *ngFor="let student of students">
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.Dob}}</td>
+                    <td>{{student.currentAddress}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3>--> *ngSwitch</h3>
+
+        <div [ngSwitch]="option">
+
+            <div *ngIf="ifTrue">
+                <div *ngSwitchCase="'car'">My fevorite car is : Mahindra thar</div>
+                <div *ngSwitchCase="'company'">My fevorite company is :
+                    microsoft</div>
+                <div *ngSwitchCase="'city'">My fevorite city is : pune</div>
+                <div *ngSwitchCase="'bike'">My fevorite bike is : ktm duke</div>
+                <div *ngSwitchDefault>Please select appropriate value</div>
+            </div>
+
+        </div>
+
+
+
+        <h2>3 : Attribute Directive</h2>
+
+        <h3>--> NgStyle</h3>
+        <div [ngStyle]="{'color':'white' , 'background-color':'green' ,
+            'margin':'10px' , 'text-align':'center'}">This is dummy text for the
+            ngStyle Example</div>
+
+        <div [ngStyle]="{'color':'white' , 'background-color':gn ,
+            'margin':'10px' , 'text-align':'center'}">This is dummy text for the
+            ngStyle Example</div>
+
+
+        <div class="bg-danger text-center" [ngStyle]="{'margin':'10px' ,
+            'color':'white' , 'background-color':'brown'}">hey this is example
+            of the ngstyle in short !</div>
+
+
+
+
+
+        <h3>--> NgClass</h3>
+
+        <div [ngClass]="'c1'">This is example of the {{example.firstName}}</div>
+        <h3>--> NgModel</h3>
+
+        <div>
+            <input [(ngModel)]="enterName">
+            {{enterName}}
+        </div>
+
+        <div>
+            <input [(ngModel)]="setName">
+            {{setName}}
+        </div>
+
+
+
+        <h1 class="bg-danger">************Interpolation</h1>
+
+        <div class="bg-danger">
+
+            {{setName}}
+
+        </div>
+
+        <div class="bg-danger">
+
+            {{setNumber}}
+
+        </div>
+
+        <div class="bg-danger">
+
+            {{setObject.firstName}}
+            {{setObject.Dob}}
+            {{setObject.currentAddress}}
+
+        </div>
+
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>firstName</th>
+                    <th>Dob</th>
+                    <th>currentAddress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td [title]="setObject.firstName">{{setObject.firstName}}</td>
+                    <td [title]="setObject.currentAddress">{{setObject.currentAddress}}</td>
+                    <td [title]="setObject.Dob">{{setObject.Dob}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <div [ngClass]="'c1 c2'">Hey this is example of the ngClass </div>
+        <div [style.background-color]="'red'">Hey this is example of the ngClass
+        </div>
+        <div [style.background-color]="red">Hey this is example of the ngClass
+        </div>
+
+        <div>
+            <input [ngModel]="enterName">
+            returning name using Interpolation : {{enterName}}
+        </div>
+
+    </div>
+
+    <div *ngIf="isTrue">
+        {{setObject.firstName}}
+        {{setObject.Dob}}
+        {{setObject.currentAddress}}
+    </div>
+
+
+    <table class="table table-bordered bg-danger text-white">
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.firstName}}</td>
+                <td>{{student.Dob}}</td>
+                <td>{{student.currentAddress}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div [ngSwitch]="chooseOption" class="bg-danger">
+
+        <div [title]="'{{setObject.firstName}}'" *ngSwitchCase="'car'">Mahindra
+            Thar : {{setObject.firstName}}</div>
+        <div *ngSwitchCase="'proffesion'">IT Engineer</div>
+        <div *ngSwitchCase="'bike'">KTM duke</div>
+        <div *ngSwitchDefault>This is default case of the ngSwitch</div>
+
+    </div>
+
+    <!-- **************************************[Propety binding]*********************************** -->
+    <!-- the examples on the property binding you can see with real life examples -->
+    <!-- <div class="bg-primary" [style]="'background-color':'red'"></div> -->
+    <img [src]="img" [alt]="alt">
 
 
 
@@ -7,5 +198,124 @@
 
 
 
-<!-- <app-list-profile></app-list-profile> -->
-<router-outlet></router-outlet>
+
+
+
+
+
+
+
+    <!-- *****************custom piping **************************** -->
+
+    <div class="bg-info text-center">custom pipe in angular</div>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>gender</th>
+                <th>address</th>
+                <th>dob</th>
+                <th>experience</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let employe of employes">
+                <td [title]="'hello'">{{employe.name | mypipe : employe.gender}}</td>
+                <td [title]="'hello'">{{employe.gender}}</td>
+                <td [title]="'hello'">{{employe.address}}</td>
+                <td [title]="'hello'">{{employe.dob}}</td>
+                <td [title]="'hello'">{{employe.experience | xpipe :
+                    employe.experience}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <img [src]="img" [alt]="alt">
+
+    <div [innerHTML]="'hello this is inner html code '"></div>
+
+    <div [style.background]="redcolor">Hello this is style property</div>
+    <div [style.color]="browncolor">Hello this is style property</div>
+
+
+
+
+
+
+    <!-- Attribute binding ************************** -->
+
+    <table class="table table-bordered bg-danger text-white">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>address</td>
+                <td>company</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>saurabh</td>
+                <td>sangamner</td>
+                <td>crossayst</td>
+            </tr>
+            <tr>
+                <td>saurabh</td>
+                <td>sangamner</td>
+                <td>crossayst</td>
+            </tr>
+            <tr>
+                <td>saurabh</td>
+                <td>sangamner</td>
+                <td>crossayst</td>
+            </tr>
+            <tr>
+                <td [attr.colspan]="colvalue">saurabh</td>
+                <td>crossayst</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+    <!-- ******************property binding ********************
+    -->
+
+
+    <!-- **************event binding *****************************
+    -->
+    <button (click)="getMethod()">click me !</button>
+
+
+    <div (mouseover)="getOver(1,2,3)">mouseover event is occured !</div>
+
+
+    <div (mouseover)="getOverNumber(1,'hello this is string')">mouseover event
+        is occured !</div>
+
+    <div>
+        <input [(ngModel)]="getName">
+        {{getName}}
+    </div>
+
+
+    <div class="bg-primary">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facilis
+        repellendus quasi nulla dicta facere quaerat molestias? Architecto
+        quaerat modi facere id consequuntur. Cupiditate, commodi nobis
+        temporibus officiis placeat vel! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Odit temporibus, rerum quidem voluptatibus sapiente
+        numquam amet sed, magnam necessitatibus neque vel asperiores,
+        praesentium doloremque repudiandae illum eveniet beatae quos.
+    </div>
+
+    <router-outlet></router-outlet>
