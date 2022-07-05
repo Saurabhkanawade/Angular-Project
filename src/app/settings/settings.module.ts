@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ResetComponent } from './reset/reset.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ResetComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ResetComponent
   ]
 })
 export class SettingsModule { }

@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'simpleProject';
  
+  setCurrency=40;
 
- getName='';
+  getName='';
 
   colvalue=2;
   red='green';
