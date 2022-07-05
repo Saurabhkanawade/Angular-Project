@@ -8,6 +8,11 @@ import { ProfileModule } from './profile/profile.module';
 import { FormsModule } from '@angular/forms';
 import { MypipePipe } from './mypipe.pipe';
 import { XpipePipe } from './xpipe.pipe';
+import { LoanComponent } from './loan/loan.component';
+import { AddLoanComponent } from './loan/add-loan/add-loan.component';
+import { DemoComponent } from './demo/demo.component';
+import { ContactModule } from './contact/contact.module';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 
 
@@ -16,15 +21,21 @@ import { XpipePipe } from './xpipe.pipe';
     AppComponent,
     MypipePipe,
     XpipePipe,
+    LoanComponent,
+    AddLoanComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ProfileModule,
-    FormsModule
+    FormsModule,
+    ContactModule
   ],
-  providers: [],
+  providers: [
+    {provide:LocationStrategy , useClass:PathLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

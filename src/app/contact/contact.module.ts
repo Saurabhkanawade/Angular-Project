@@ -18,6 +18,11 @@ import { ViewContactComponent } from './view-contact/view-contact.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    AddContactComponent,
+    DeleteContactComponent,
+    EditContactComponent
   ]
 })
 export class ContactModule { }

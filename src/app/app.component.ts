@@ -149,5 +149,59 @@ export class AppComponent {
   }
 
 
+  // example of the custom piping 
+
+  persons:any=[
+  {
+    name:'saurabh kanawade',
+    address:'hydrabad',
+    age:21,
+    isWorking:true,
+    gender:'male'
+  },
+  {
+    name:'shailesh Karpe',
+    address:'banglore',
+    age:26,
+    isWorking:true,
+    gender:'male'
+  },
+  {
+    name:'sagar bhomale',
+    address:'chakan',
+    age:45,
+    isWorking:true,
+    gender:'male'
+  },
+  {
+    name:'shankar kandekar',
+    address:'mumbai',
+    age:21,
+    isWorking:true,
+    gender:'male'
+  },
+  {
+    name:'amit kanawade',
+    address:'nashik',
+    age:77,
+    isWorking:false,
+    gender:'male'
+  },
+  {
+    name:'sagar kanawade',
+    address:'delhi',
+    age:55,
+    isWorking:true,
+    gender:'male'
+  },
+  {
+    name:'jayashree walunj',
+    address:'pune',
+    age:21,
+    isWorking:false,
+    gender:'female'
+  },
+]
+
 
 }

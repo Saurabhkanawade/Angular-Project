@@ -1,3 +1,18 @@
+
+    <router-outlet></router-outlet>
+    <router-outlet name="outlet1"></router-outlet>
+    <router-outlet name="outlet1"></router-outlet>
+
+    <app-demo></app-demo>
+    <app-add-contact></app-add-contact>
+    <app-edit-contact></app-edit-contact>
+    <!-- <app-login></app-login> -->
+    <!-- <app-add-contact></app-add-contact> -->
+    <app-list-profile></app-list-profile>
+
+
+
+
 <div class="bg-warning">
 
     <h1> Example on Directive </h1>
@@ -308,6 +323,37 @@ this is a use where component directive is used
     </div>
 
 
+  <!-- custom pipe example  -->
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Working Status</th>
+            <th>gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of persons">
+            <td>{{person.name | mypipe : person.gender}}</td>
+            <td>{{person.address}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.isWorking}}</td>
+            <td>{{person.gender}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
     <div class="bg-primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facilis
         repellendus quasi nulla dicta facere quaerat molestias? Architecto
@@ -317,5 +363,3 @@ this is a use where component directive is used
         numquam amet sed, magnam necessitatibus neque vel asperiores,
         praesentium doloremque repudiandae illum eveniet beatae quos.
     </div>
-
-    <router-outlet></router-outlet>
