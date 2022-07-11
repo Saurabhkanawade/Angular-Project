@@ -15,4 +15,9 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ]
 })
-export class AuthenticationModule { }
+export class AuthenticationModule {
+
+  constructor(){
+    console.log('auth get loaded');
+  }
+ }

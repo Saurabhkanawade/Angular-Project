@@ -1,4 +1,3 @@
-<p>demo works!</p>
 <p>clients works!</p>
 
 <a [routerLink]="'/user'">User Link</a>
@@ -19,7 +18,20 @@
             <td>{{client.lastName}}</td>     
             <td>{{client.gender}}</td>     
             <td>{{client.salary}}</td>  
-            <td><a [routerLink]="['/edit',client.clientId]">edit</a></td>    
+            
+            <!-- static routerLinks -->
+                       
+            <td><a [routerLink]="'/edit'">edit </a> | <a [routerLink]="'/delete'">delete</a></td>
+            
+            
+            <!-- dynamic routerLinks -->
+            <td>
+                <a [routerLink]="['/user',client.clientId,'edit']">edit</a>
+              | <a [routerLink]="['/user' , client.clientId,'delete' ]"> delete</a>
+              | <a [routerLink]="['/user',client.firstName,'save']">save</a>
+
+
+            </td>   
             
               
         </tr>

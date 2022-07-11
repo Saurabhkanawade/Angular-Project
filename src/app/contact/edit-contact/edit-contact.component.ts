@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditContactComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log('clients module executed')
+
+  }
 
   ngOnInit(): void {
   }

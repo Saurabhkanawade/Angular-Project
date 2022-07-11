@@ -20,4 +20,10 @@ import { DownloadPdfComponent } from './leads-listing/leads-tools/download-pdf/d
     CommonModule
   ]
 })
-export class LeadsModule { }
+export class LeadsModule {
+
+  constructor(){
+    console.log('lead get loaded')
+  }
+
+ }
